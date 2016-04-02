@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.bzppr.ru$ [NC]
+RewriteRule ^(.*)$ http://bzppr.ru/$1 [R=301,L]
